@@ -1,0 +1,39 @@
+version: '2'
+
+networks:
+  mx:
+
+services:
+   host01:
+     build: host01
+     privileged: true
+     networks:
+      - mx
+   host02:
+     build: host02
+     privileged: true
+     networks:
+      - mx
+     depends_on:
+      - host01 
+   host03:
+     build: host03
+     privileged: true
+     networks:
+      - mx
+     depends_on:
+      - host02
+   host04:
+     build: host04
+     privileged: true
+     networks:
+      - mx
+     depends_on:
+      - host03
+   host05:
+     build: host05
+     privileged: true
+     networks:
+      - mx
+     depends_on:
+      - host04

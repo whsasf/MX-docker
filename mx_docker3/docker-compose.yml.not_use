@@ -1,0 +1,37 @@
+version: '2'
+
+networks:
+  mx:
+     privileged: true
+
+services:
+   ansiblehost:
+     build: ansiblehost
+     networks:
+      - mx
+     privileged: true
+   host01:
+     build: host01
+     networks:
+      - mx
+     privileged: true
+   host02:
+     build: host02
+     networks:
+      - mx
+     privileged: true
+   host03:
+     build: host03
+     networks:
+      - mx
+     privileged: true
+   host04:
+     build: host04
+     networks:
+      - mx
+     privileged: true
+   host05:
+     build: host05
+     networks:
+      - mx
+     privileged: true

@@ -1,0 +1,30 @@
+version: '2'
+
+networks:
+  mx:
+
+services:
+   ansiblehost:
+     build: ansiblehost
+     networks:
+      - mx
+   host01:
+     build: host01
+     networks:
+      - mx
+   host02:
+     build: host02
+     networks:
+      - mx
+   host03:
+     build: host03
+     networks:
+      - mx
+   host04:
+     build: host04
+     networks:
+      - mx
+   host05:
+     build: host05
+     networks:
+      - mx
