@@ -1,4 +1,4 @@
-FROM nginx
+FROM cassandra:2.1.20
 MAINTAINER ram
 #VOLUME ['/usr/share/nginx/html']
 #COPY ./nginx/html /usr/share/nginx/html
@@ -8,4 +8,4 @@ MAINTAINER ram
 #WORKDIR /opt
 #RUN pwd
 #RUN /bin/bash -c 'alias ll='ls -al';ll'
-EXPOSE 80
+#EXPOSE 80
